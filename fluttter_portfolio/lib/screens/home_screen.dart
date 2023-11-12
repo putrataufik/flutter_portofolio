@@ -62,13 +62,14 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Container(
-  margin: EdgeInsets.symmetric(horizontal: 16), // Atur margin kiri dan kanan sesuai kebutuhan
-  child: Align(
-    alignment: Alignment.centerLeft,
-    child: ContactWidget(),
-  ),
-),
-
+              margin: EdgeInsets.symmetric(
+                  horizontal:
+                      16), // Atur margin kiri dan kanan sesuai kebutuhan
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: ContactWidget(),
+              ),
+            ),
           ],
         ),
       ),
