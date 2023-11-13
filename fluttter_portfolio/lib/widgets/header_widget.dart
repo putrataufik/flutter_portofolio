@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HeaderWidget extends StatelessWidget {
+  const HeaderWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -18,7 +20,7 @@ class HeaderWidget extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5), // Warna shadow
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3), // Posisi shadow
+            offset: const Offset(0, 3), // Posisi shadow
           ),
         ],
       ),

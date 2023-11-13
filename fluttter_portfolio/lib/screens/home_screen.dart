@@ -4,23 +4,25 @@ import '../widgets/contact_widget.dart';
 import '../widgets/aboutme_widget.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HeaderWidget(),
-            SizedBox(height: 16),
+            const HeaderWidget(),
+            const SizedBox(height: 16),
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 0.05 * MediaQuery.of(context).size.width,
               ),
-              child: Text(
+              child: const Text(
                 'Putra Taufik Syaharuddin',
                 style: TextStyle(
                   fontSize: 24,
@@ -28,12 +30,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 0.05 * MediaQuery.of(context).size.width,
               ),
-              child: Text(
+              child: const Text(
                 'Full Stack Developer',
                 style: TextStyle(
                   fontSize: 18,
@@ -42,12 +44,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 0.05 * MediaQuery.of(context).size.width,
               ),
-              child: Text(
+              child: const Text(
                 'Tentang Saya',
                 style: TextStyle(
                   fontSize: 18,
@@ -55,39 +57,22 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 8),
-            Align(
+            const SizedBox(height: 8),
+            const Align(
               alignment: Alignment.center,
               child: AboutMeWidget(),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
               margin: EdgeInsets.symmetric(
-                  horizontal:
-                      16), // Atur margin kiri dan kanan sesuai kebutuhan
-              child: Align(
+                  horizontal: 0.05 * MediaQuery.of(context).size.width), // Atur margin kiri dan kanan sesuai kebutuhan
+              child: const Align(
                 alignment: Alignment.centerLeft,
                 child: ContactWidget(),
               ),
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.work),
-            label: 'Experience',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.code),
-            label: 'Skills',
-          ),
-        ],
       ),
     );
   }

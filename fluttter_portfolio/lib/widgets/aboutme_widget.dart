@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AboutMeWidget extends StatelessWidget {
+  const AboutMeWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final String fullText = '''
+    const String fullText = '''
 Saya adalah seorang pengembang perangkat lunak dengan minat khusus dalam pengembangan aplikasi mobile menggunakan Flutter. Saya memiliki pengalaman dalam mengembangkan berbagai jenis aplikasi, termasuk aplikasi e-commerce, aplikasi manajemen proyek, dan aplikasi sosial. Keahlian saya meliputi Flutter, Dart, dan berbagai teknologi terkait mobile development. Saya senang belajar hal-hal baru dan selalu mencari cara untuk meningkatkan keterampilan pengembangan saya.
 ''';
     return Column(
@@ -12,12 +14,12 @@ Saya adalah seorang pengembang perangkat lunak dengan minat khusus dalam pengemb
               margin: EdgeInsets.only(
                   left: 0.05 * MediaQuery.of(context).size.width),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 0.05 * MediaQuery.of(context).size.width,
               ),
-              child: ExpandableText(
+              child: const ExpandableText(
               
               text: fullText,
               trimLines: 3,
@@ -42,7 +44,7 @@ class ExpandableText extends StatefulWidget {
   final String lessText;
   final Color linkColor;
 
-  ExpandableText({
+  const ExpandableText({super.key, 
     required this.text,
     required this.trimLines,
     required this.trimStyle,

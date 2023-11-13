@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ContactWidget extends StatelessWidget {
+  const ContactWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final cardWidth = 300.0; // Ukuran yang diinginkan untuk lebar card
-    final cardHeight = 80.0; // Ukuran yang diinginkan untuk tinggi card
+    const cardWidth = 300.0; // Ukuran yang diinginkan untuk lebar card
+    const cardHeight = 80.0; // Ukuran yang diinginkan untuk tinggi card
 
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ContactCard(
@@ -20,7 +22,7 @@ class ContactWidget extends StatelessWidget {
         ContactCard(
           icon: Icons.facebook,
           label: 'Facebook',
-          value: 'facebook.com/putrataufik',
+          value: 'facebook.com/Omaga',
           width: cardWidth,
           height: cardHeight,
         ),
@@ -55,7 +57,7 @@ class ContactCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
       
@@ -64,12 +66,12 @@ class ContactCard extends StatelessWidget {
         child: Row(
           children: [
             Icon(icon, size: 32),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(label, style: TextStyle(fontWeight: FontWeight.bold)),
+                Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
                 Text(value),
               ],
             ),
